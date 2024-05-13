@@ -241,12 +241,11 @@ footer{
 
     .container-about-us img{
         width: 100%;
-        margin-right: 0;
     }
 
     .container-about-us-text{
         width: 100%;
-        padding: 0;
+        justify-content: space-evenly;
     }
 
     .service{
@@ -281,18 +280,22 @@ footer{
 
 @media only screen and (min-width: 768px) and (max-width: 1024px){
     .container-about-us{
-        width: 90%;
-    }
-    .container-about-us img{
-        width: 50%;
+        flex-direction: column;
     }
 
+    .container-about-us img{
+        width: 100%;
+    }
+
+    .container-about-us-text{
+        width: 100%;
+    }
     .main-image{
         height: 20em;
     }
 
     .container-about-us-text{
-        width: 50%;
+        width: 90%;
     }
 
     .service{
@@ -300,32 +303,6 @@ footer{
     }
 
     .portfolio-image{
-        width: 30%;
-    }
-}
-
-@media only screen and (min-width :1024px) {
-    .container-about-us{
-        width: 80%;
-    }
-
-    .main-image{
-        height: 25em;
-    }
-
-    .container-about-us img{
         width: 40%;
-    }
-
-    .container-about-us-text{
-        width: 50%;
-    }
-
-    .service{
-        width: 30%;
-    }
-
-    .portfolio-image{
-        width: 30%;
     }
 }
