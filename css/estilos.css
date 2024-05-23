@@ -202,7 +202,9 @@ footer{
 }
 
 .container-footer{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     width: 90%;
     justify-content: space-evenly;
     margin: auto;
@@ -210,15 +212,42 @@ footer{
     border-bottom: 1px solid gray;
 }
 
-.content-foo{
-    text-align: center;
+.input_data{
+    height: 40px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.content-foo h4{
-    color: #fff;
-    border-bottom: 3px solid #af20d3;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
+.full_width{
+
+    grid-column: 1 /span 2;
+}
+
+.input_data input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+}
+
+.input_data input:focus ~ label,
+.input_data input:valid ~ label{
+    transform: translateY(-25px);
+    font-size: 15px;
+}
+
+.input_data label{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: black;
+    pointer-events: none;
+    transition: transform 0.3s ease;
 }
 
 
